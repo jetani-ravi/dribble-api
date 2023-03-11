@@ -6,17 +6,12 @@ const router: Router = express.Router();
 
 router
   .route('/')
-  .post( validate(userValidation.createUser), userController.createUser)
+  .post(validate(userValidation.createUser), userController.createUser)
   .get(validate(userValidation.getUsers), userController.getUsers);
 
-router
-  .route('/categories')
-  .get(validate(userValidation.getCategories), userController.getCategories)
+router.route('/categories').get(validate(userValidation.getCategories), userController.getCategories);
 
-router
-  .route('/:userId')
-  .get(validate(userValidation.getUser), userController.getUser)
-
+router.route('/:userId').get(validate(userValidation.getUser), userController.getUser);
 
 export default router;
 
@@ -98,16 +93,16 @@ export default router;
  *               profileUrl: "https://www.facebook.com/scott.heliker"
  *               portfolio: [
  *                  {
- *                       "url":"https://reqres.in/img/faces/10-image.jpg", 
- *           	            tags : ["adobe illustrator","adobe photoshop"] 
+ *                       "url":"https://reqres.in/img/faces/10-image.jpg",
+ *           	            tags : ["adobe illustrator","adobe photoshop"]
  *                  },
  *                   {
- *                       "url":"https://reqres.in/img/faces/10-image.jpg", 
- *           	            tags : ["adobe illustrator","adobe photoshop"] 
- *                  },                       
+ *                       "url":"https://reqres.in/img/faces/10-image.jpg",
+ *           	            tags : ["adobe illustrator","adobe photoshop"]
+ *                  },
  *                  {
- *                       "url":"https://reqres.in/img/faces/10-image.jpg", 
- *           	            tags : ["adobe illustrator","adobe photoshop"] 
+ *                       "url":"https://reqres.in/img/faces/10-image.jpg",
+ *           	            tags : ["adobe illustrator","adobe photoshop"]
  *                  }
  *               ]
  *               certifications: [
@@ -124,7 +119,7 @@ export default router;
  *	            	    date : "2018-04-05T14:00:00.000Z",
  *                 }
  *               ]
- *               educations: [ 
+ *               educations: [
  *                  {
  *                   "courseName": "Bachelors of Arts",
  *                   "university" : "Univesity of Florida",

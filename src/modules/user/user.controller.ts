@@ -19,8 +19,9 @@ export const getUsers = catchAsync(async (req: Request, res: Response) => {
   res.send(result);
 });
 
-
-export const getCategories = catchAsync(async (res: Response) => {
+export const getCategories = catchAsync(async (req: Request, res: Response) => {
+  const options: IOptions = pick(req.query, ['sortBy', 'limit', 'page', 'projectBy']);
+  console.log(options);
   const result = await userService.fetchUserSkills();
   res.send(result);
 });

@@ -110,7 +110,7 @@ The environment variables can be found and modified in the `.env` file. They com
 
 ```bash
 # Port number
-PORT=3000
+PORT=3001
 
 # URL of the Mongo DB
 MONGODB_URL=mongodb://127.0.0.1:27017/dribble_db
@@ -129,4 +129,4 @@ CLIENT_URL=http://localhost:9000
 
 ## API Documentation
 
-To view the list of available APIs and their specifications, run the server and go to `http://localhost:3000/v1/docs` in your browser. This documentation page is automatically generated using the [swagger](https://swagger.io/) definitions written as comments in the route files.
+To view the list of available APIs and their specifications, run the server and go to `http://localhost:3001/v1/docs` in your browser. This documentation page is automatically generated using the [swagger](https://swagger.io/) definitions written as comments in the route files.
