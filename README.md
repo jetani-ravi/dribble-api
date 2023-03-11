@@ -113,7 +113,7 @@ The environment variables can be found and modified in the `.env` file. They com
 PORT=3000
 
 # URL of the Mongo DB
-MONGODB_URL=mongodb://127.0.0.1:27017/dribble_test_db
+MONGODB_URL=mongodb://127.0.0.1:27017/dribble_db
 
 # JWT
 # JWT secret key
