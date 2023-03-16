@@ -10,9 +10,10 @@
     "node": ">=14.0.0 <19"
   },
   "scripts": {
-    "start": "pm2 start ecosystem.config.json --no-daemon",
-    "start:build": "tsc --build && pm2 start ecosystem.config.json --no-daemon",
+    "start": "NODE_ENV=development node --experimental-modules --es-module-specifier-resolution=node dist/index.js",
+    "start:build": "tsc --build && NODE_ENV=development pm2 start ecosystem.config.json --no-daemon  --env development",
     "compile": "tsc --build",
+    "ci": "yarn install && npm run compile && npm run start",
     "compile:watch": "tsc --build --watch",
     "pre:dev": "cross-env NODE_ENV=development nodemon --experimental-modules --es-module-specifier-resolution=node dist/index.js",
     "dev": "concurrently --kill-others \"yarn compile:watch\" \"yarn pre:dev\"",
